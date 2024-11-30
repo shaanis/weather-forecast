@@ -8,6 +8,7 @@ const displayWeather =async()=>{
     };
     
     nocity.innerHTML = "";
+    nodata.innerHTML="";
     const input = city.value
     if(input){
         try{
@@ -62,7 +63,7 @@ const displayWeather =async()=>{
     }
     
     }else{
-        nocity.innerHTML="please Enter a  city"
+        nodata.innerHTML="please Enter a  city"
     }
   
   

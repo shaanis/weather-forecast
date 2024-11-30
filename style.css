@@ -24,18 +24,18 @@ body{
 
 #nocity{
     text-align: center;
-    margin-left: -320px;
+    margin-left: -280px;
     /* padding-left: 530px; */
     color: red;
 }
+#nodata{
+    text-align: center;
+    margin-left: -324px;
+    margin-top: -15px;
+    color: red;
+}
 
-/* .grid{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-     place-items: center; 
-    justify-items: center; 
 
-} */
 
 .imgDiv{
     width: 300px;
@@ -80,8 +80,8 @@ body{
     font-size: 12px;
 }
 
-@media(min-width:768px){
-    #nocity{
-        
+@media(max-width:500px){
+    .sec{
+        padding: 10px;
     }
 }
