@@ -85,7 +85,7 @@ body{
         padding: 10px;
     }
     #nocity{
-        padding-left: 145px;
+        margin-left: -135px;
         font-size: 14px;
     }
 }
