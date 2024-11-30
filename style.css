@@ -84,4 +84,7 @@ body{
     .sec{
         padding: 10px;
     }
+    #nocity{
+        padding-left: 10px;
+    }
 }
