@@ -18,8 +18,8 @@ const displayWeather =async()=>{
             console.log(weatherDetail);
                 result.innerHTML=`
                 <div class="d-flex justify-content-center">
-                  <div class="imgDiv">
-                      <img class=" " src="./images/weather.jpg" alt="">
+                  <div class="imgDiv"id="topImg">
+                      
                   </div>
                   <div class="temp">
                       <div id ="wicon">
@@ -38,19 +38,41 @@ const displayWeather =async()=>{
                       <p class=" text-light">humidity ${weatherDetail.main.humidity}kmph</p>
                       <p class=" text-light">pressure ${weatherDetail.main.pressure}kmph</p>
                   </div>
-                  <div class="imgDiv">
+                  <div class="imgDiv" id="bottomImg">
                       <img class=" " src="./images/mountain.jpg" alt="">
                   </div>
                 </div>  
               `
               if(weatherDetail.weather[0].main=="Clouds"){
-                wicon.innerHTML=`<img style="width: 30px;" src="./images/cloudy.png" alt="">`
+                wicon.innerHTML=`<img style="width: 30px;" src="./images/cloudy.png" alt=""> `
+                topImg.innerHTML=` <img class=" " src="./images/climate/cloudy.jpg" alt="">`
+                bottomImg.innerHTML=`
+                 <img class=" " src="./images/climate/cloudy1.jpg" alt="">
+                `
               }else if(weatherDetail.weather[0].main=="Clear"){
                   wicon.innerHTML=`<img style="width: 30px;" src="./images/sun.png" alt="">`
+                  topImg.innerHTML=` <img class=" " src="./images/climate/clear.jpg" alt="">`
+                bottomImg.innerHTML=`
+                 <img class=" " src="./images/climate/clear1.jpg" alt="">
+                `
               }else if(weatherDetail.weather[0].main=="Rain"){
                 wicon.innerHTML=`<img style="width: 30px;" src="./images/rainy-day.png" alt="">`
+                topImg.innerHTML=` <img class=" " src="./images/climate/rain.jpg" alt="">`
+                bottomImg.innerHTML=`
+                 <img class=" " src="./images/climate/rain1.jpg" alt="">
+                `
               }else if(weatherDetail.weather[0].main=="Mist"){
                 wicon.innerHTML=`<img style="width: 30px;" src="./images/mist.png" alt="">`
+                topImg.innerHTML=` <img class=" " src="./images/climate/mist.jpg" alt="">`
+                bottomImg.innerHTML=`
+                 <img class=" " src="./images/climate/mist1.jpg" alt="">
+                `
+              }else if(weatherDetail.weather[0].main=="Haze"){
+                wicon.innerHTML=`<img style="width: 30px;" src="./images/fog.png" alt="">`
+                topImg.innerHTML=` <img class=" " src="./images/climate/haze.jpg" alt="">`
+                bottomImg.innerHTML=`
+                 <img class=" " src="./images/climate/haze1.jpg" alt="">
+                `
               }
             
             
