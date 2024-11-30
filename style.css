@@ -87,6 +87,10 @@ body{
     #nocity{
         text-align: start;
         margin-left: 7px;
-        font-size: 14px;
+        
+    }
+    #nodata{
+        text-align: start;
+        margin-left: 7px; 
     }
 }
