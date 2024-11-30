@@ -25,7 +25,7 @@ const displayWeather =async()=>{
                       <div id ="wicon">
                       
                       </div>
-                      <p class="text mt-3 text-light">${weatherDetail.main.temp}<span>°F</span></p>
+                      <p class="text mt-3 text-light">${((weatherDetail.main.temp-273.15)*(9/5)+32).toFixed(2)}<span>°F</span></p>
                       <p class="text text-light">${weatherDetail.weather[0].main}</p>
                       <p class="place-text text-light">${weatherDetail.name},${weatherDetail.sys.country}</p>
                   </div>
