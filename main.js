@@ -3,15 +3,7 @@ const displayWeather =async()=>{
         weekday: 'long',
         month: 'long',
         day: 'numeric',
-        hour: '2-digit',
-      minute: '2-digit',
-      hour12: true 
-        
-        
     };
-    const time ={
-      
-    }
     
     nocity.innerHTML = "";
     nodata.innerHTML="";
@@ -34,7 +26,7 @@ const displayWeather =async()=>{
                       <p class="text mt-3 text-light">${Math.floor(weatherDetail.main.temp-273.15)}<span>°</span></p>
                       <p class="text text-light">${weatherDetail.weather[0].main}</p>
                       <p class="place-text text-light">${weatherDetail.name},${weatherDetail.sys.country}</p>
-                      <span class="  text-light time">${new Date(weatherDetail.dt * 1000).toLocaleTimeString('en-US', time)}</span>
+
 
                   </div>
               </div>
