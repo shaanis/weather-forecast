@@ -33,14 +33,14 @@ const displayWeather =async()=>{
                       <p class="text mt-3 text-light">${Math.floor(weatherDetail.main.temp-273.15)}<span>°</span></p>
                       <p class="text text-light">${weatherDetail.weather[0].main}</p>
                       <p class="place-text text-light">${weatherDetail.name},${weatherDetail.sys.country}</p>
-                      <span class="  text-light time">${new Date(weatherDetail.dt * 1000).toLocaleString('en-US', time)}</span>
+                      <span class="  text-light time">${new Date(weatherDetail.dt * 1000).toLocaleTimeString('en-US', time)}</span>
 
                   </div>
               </div>
               <div class="d-flex justify-content-center mt-5">
                <div class="temp temp1">
                       <span class="  text-light date">${new Date(weatherDetail.dt * 1000).toLocaleString('en-US', options)}</span>
-                      <p class=" text-light mt-2">feels like ${weatherDetail.main.feels_like}°</p>
+                      <p class=" text-light mt-2">feels like ${Math.floor(weatherDetail.main.feels_like-273.15)}°</p>
                       <p class=" text-light">wind ${weatherDetail.wind.speed} kmph</p>
                       <p class=" text-light">humidity ${weatherDetail.main.humidity} kmph</p>
                       <p class=" text-light">pressure ${weatherDetail.main.pressure} kmph</p>
