@@ -25,7 +25,7 @@ const displayWeather =async()=>{
                       <div id ="wicon">
                       
                       </div>
-                      <p class="text mt-3 text-light">${((weatherDetail.main.temp-273.15)*(9/5)+32).toFixed(2)}<span>°F</span></p>
+                      <p class="text mt-3 text-light">${Math.floor(((weatherDetail.main.temp-273.15)*(9/5)+32))}<span>°F</span></p>
                       <p class="text text-light">${weatherDetail.weather[0].main}</p>
                       <p class="place-text text-light">${weatherDetail.name},${weatherDetail.sys.country}</p>
                   </div>
@@ -72,6 +72,13 @@ const displayWeather =async()=>{
                 topImg.innerHTML=` <img class=" " src="./images/climate/haze.jpg" alt="">`
                 bottomImg.innerHTML=`
                  <img class=" " src="./images/climate/haze1.jpg" alt="">
+                `
+              }else if(weatherDetail.weather[0].main=="Drizzle"){
+
+                wicon.innerHTML=`<img style="width: 30px;" src="./images/drizzleIcon.png" alt="">`
+                topImg.innerHTML=` <img class=" " src="./images/climate/drizzle.jpg" alt="">`
+                bottomImg.innerHTML=`
+                 <img class=" " src="./images/climate/drizzle1.jpg" alt="">
                 `
               }
             
