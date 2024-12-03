@@ -6,6 +6,11 @@ const displayWeather =async()=>{
         
         
     };
+    const time ={
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true 
+    }
     
     nocity.innerHTML = "";
     nodata.innerHTML="";
@@ -25,9 +30,11 @@ const displayWeather =async()=>{
                       <div id ="wicon">
                       
                       </div>
-                      <p class="text mt-3 text-light">${Math.floor(((weatherDetail.main.temp-273.15)*(9/5)+32))}<span>°</span></p>
+                      <p class="text mt-3 text-light">${Math.floor(weatherDetail.main.temp-273.15)}<span>°</span></p>
                       <p class="text text-light">${weatherDetail.weather[0].main}</p>
                       <p class="place-text text-light">${weatherDetail.name},${weatherDetail.sys.country}</p>
+                      <span class="  text-light time">${new Date(weatherDetail.dt * 1000).toLocaleString('en-US', time)}</span>
+
                   </div>
               </div>
               <div class="d-flex justify-content-center mt-5">
