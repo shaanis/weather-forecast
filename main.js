@@ -34,9 +34,9 @@ const displayWeather =async()=>{
                <div class="temp temp1">
                       <span class="  text-light date">${new Date(weatherDetail.dt * 1000).toLocaleString('en-US', options)}</span>
                       <p class=" text-light mt-2">feels like ${weatherDetail.main.feels_like}°</p>
-                      <p class=" text-light">wind ${weatherDetail.wind.speed}kmph</p>
-                      <p class=" text-light">humidity ${weatherDetail.main.humidity}kmph</p>
-                      <p class=" text-light">pressure ${weatherDetail.main.pressure}kmph</p>
+                      <p class=" text-light">wind ${weatherDetail.wind.speed} kmph</p>
+                      <p class=" text-light">humidity ${weatherDetail.main.humidity} kmph</p>
+                      <p class=" text-light">pressure ${weatherDetail.main.pressure} kmph</p>
                   </div>
                   <div class="imgDiv" id="bottomImg">
                       <img class=" " src="./images/mountain.jpg" alt="">
