@@ -3,13 +3,14 @@ const displayWeather =async()=>{
         weekday: 'long',
         month: 'long',
         day: 'numeric',
+        hour: '2-digit',
+      minute: '2-digit',
+      hour12: true 
         
         
     };
     const time ={
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true 
+      
     }
     
     nocity.innerHTML = "";
