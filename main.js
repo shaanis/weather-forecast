@@ -4,7 +4,10 @@ const displayWeather =async()=>{
         month: 'long',
         day: 'numeric',
     };
-    
+    var time ={
+      hour:'numeric',
+      minute:'numeric'
+    }    
     nocity.innerHTML = "";
     nodata.innerHTML="";
     const input = city.value
@@ -20,16 +23,20 @@ const displayWeather =async()=>{
                       
                   </div>
                   <div class="temp">
-                      <div id ="wicon">
-                      
+                      <div class='d-flex justify-content-between'>
+                        <div id ="wicon">
+                        
+                        </div>
+                        <p class="place-text text-light me-3 text-center mt-2">${new Date(weatherDetail.dt * 1000).toLocaleString('en-US', time)}</p>
                       </div>
                       <p class="text mt-3 text-light">${Math.floor(weatherDetail.main.temp-273.15)}<span>°</span></p>
                       <p class="text text-light">${weatherDetail.weather[0].main}</p>
                       <p class="place-text text-light">${weatherDetail.name},${weatherDetail.sys.country}</p>
-
+                      
 
                   </div>
               </div>
+                 
               <div class="d-flex justify-content-center mt-5">
                <div class="temp temp1">
                       <span class="  text-light date">${new Date(weatherDetail.dt * 1000).toLocaleString('en-US', options)}</span>
